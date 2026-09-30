@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chehan Lasindu — Experience & Qualifications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-color: #020617;
+    --second-bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --main-color: #62cf9c;
+    --accent-color: #1de155;
+    --border-color: #1e293b;
+    --gradient-primary: linear-gradient(135deg, #62cf9c, #1de155);
+    --grade-a: #62cf9c;
+    --grade-b: #38bdf8;
+    --grade-c: #fbbf24;
+    --grade-d: #fb7185;
+    --grade-x: #64748b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+  body {
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(98, 207, 156, 0.3); color: var(--text-color); }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ---------- NAV ---------- */
+  .detail-nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 1000;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(98, 207, 156, 0.12);
+  }
+
+  .detail-nav-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .detail-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: opacity 0.25s ease;
+  }
+  .detail-brand:hover { opacity: 0.8; }
+
+  .detail-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .detail-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .detail-links a:hover,
+  .detail-links a.active {
+    color: var(--main-color);
+    border-color: var(--main-color);
+  }
+
+  @media (max-width: 900px) {
+    .detail-links { gap: 1.3rem; }
+    .detail-links a { font-size: 0.78rem; }
+  }
+
+  @media (max-width: 760px) {
+    .detail-links { gap: 1.1rem; }
+    .detail-links a { font-size: 0.72rem; }
+  }
+  @media (max-width: 560px) {
+    .detail-nav-inner { flex-direction: column; gap: 0.7rem; padding: 0.9rem 6%; }
+    .detail-links { justify-content: center; }
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  .detail-section {
+    min-height: 100vh;
+    padding: 8.5rem 7% 5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .detail-section.alt { background: var(--second-bg-color); }
+
+  .split {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    .split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .split.image-first .split-media { order: 1; }
+    .split.image-first .split-body { order: 2; }
+  }
+
+  .split-media {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    max-height: 520px;
+    border: 1px solid rgba(98, 207, 156, 0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .split-media img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .split-media::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(2,6,23,0.55), transparent 45%);
+  }
+
+  .eyebrow-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-heading {
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    font-weight: 800;
+    margin-bottom: 1.6rem;
+    color: var(--text-color);
+  }
+
+  /* ---------- CARD ---------- */
+  .info-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.55));
+    border: 1px solid rgba(98, 207, 156, 0.2);
+    border-radius: 1.25rem;
+    padding: 1.8rem 2rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .info-card + .info-card { margin-top: 1.2rem; }
+
+  .card-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .card-title { font-size: 1.3rem; font-weight: 700; color: var(--text-color); }
+  .card-sub { color: var(--main-color); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
+  .card-meta { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem; }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(98, 207, 156, 0.08);
+    border: 1px solid rgba(98, 207, 156, 0.25);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.9rem;
+    border-radius: 2rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.9rem 0 1.2rem; }
+
+  .badge {
+    background: rgba(98, 207, 156, 0.15);
+    color: var(--main-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    border-radius: 1rem;
+    white-space: nowrap;
+  }
+
+  .card-desc { color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 1.4rem; }
+  .card-desc ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+  .card-desc li { margin-bottom: 0.4rem; }
+
+  /* ---------- BUTTONS (theme-matched) ---------- */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(98, 207, 156, 0.08);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 0.75rem 1.6rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+
+  .btn-outline:hover {
+    background: var(--gradient-primary);
+    color: #020617;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(98, 207, 156, 0.3);
+  }
+
+  .btn-outline .arrow { transition: transform 0.3s ease; }
+  .btn-outline:hover .arrow { transform: translateX(4px); }
+  .btn-outline.is-open .arrow { transform: rotate(90deg); }
+  .btn-outline.is-open:hover .arrow { transform: rotate(90deg) translateX(0); }
+
+  /* ---------- REVEAL PANEL ---------- */
+  .reveal-panel {
+    display: none;
+    margin-top: 1.6rem;
+    animation: fadeSlide 0.5s ease;
+  }
+  .reveal-panel.open { display: block; }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- TIMELINE (A/L, O/L) ---------- */
+  .exam-card { position: relative; padding-left: 1.4rem; margin-bottom: 1.2rem; }
+  .exam-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0.4rem;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--main-color);
+    box-shadow: 0 0 10px rgba(98,207,156,0.7);
+  }
+  .exam-card::after {
+    content: '';
+    position: absolute; left: 4px; top: 1.2rem; bottom: -1.2rem;
+    width: 1px;
+    background: rgba(98, 207, 156, 0.25);
+  }
+  .exam-card:last-child::after { display: none; }
+
+  .exam-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.8rem; margin-bottom: 0.3rem; flex-wrap: wrap;
+  }
+  .exam-title { font-weight: 700; font-size: 1.02rem; }
+  .exam-note { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 0.7rem; }
+
+  .subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .subject-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(2, 6, 23, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 0.6rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .grade { font-weight: 800; font-size: 0.85rem; }
+  .grade-A { color: var(--grade-a); }
+  .grade-B { color: var(--grade-b); }
+  .grade-C { color: var(--grade-c); }
+  .grade-D { color: var(--grade-d); }
+  .grade-X { color: var(--grade-x); }
+
+  /* ---------- UNIVERSITY ACCORDION ---------- */
+  .year-block {
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 1rem;
+    margin-bottom: 0.9rem;
+    overflow: hidden;
+    background: rgba(2, 6, 23, 0.4);
+  }
+
+  .year-toggle {
+    width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    background: none; border: none; cursor: pointer;
+    color: var(--text-color);
+    padding: 1rem 1.3rem;
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 700;
+  }
+
+  .year-toggle .gpa-chip {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--main-color);
+    background: rgba(98, 207, 156, 0.12);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+  }
+
+  .year-toggle .chevron { transition: transform 0.3s ease; color: var(--text-muted); }
+  .year-block.open .chevron { transform: rotate(180deg); }
+
+  .year-body {
+    display: none;
+    padding: 0 1.3rem 1.3rem;
+  }
+  .year-block.open .year-body { display: block; }
+
+  .sem-title {
+    color: var(--main-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 1rem 0 0.6rem;
+  }
+  .sem-title:first-child { margin-top: 0.2rem; }
+
+  .gpa-trend {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-end;
+    height: 110px;
+    margin: 1.6rem 0 0.4rem;
+    padding: 0 0.2rem;
+  }
+  .gpa-bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+  .gpa-bar {
+    width: 100%;
+    max-width: 46px;
+    background: var(--gradient-primary);
+    border-radius: 0.4rem 0.4rem 0 0;
+    box-shadow: 0 0 16px rgba(98,207,156,0.35);
+  }
+  .gpa-bar-label { font-size: 0.72rem; color: var(--text-muted); text-align: center; }
+  .gpa-bar-value { font-size: 0.78rem; color: var(--main-color); font-weight: 700; }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(98, 207, 156, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .gallery-grid img:hover { transform: scale(1.03); }
+
+  /* ---------- RESEARCH ---------- */
+  .research-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+  .research-images img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(98, 207, 156, 0.2);
+  }
+  @media (max-width: 560px) { .research-images { grid-template-columns: 1fr; } }
+
+  .method-list {
+    list-style: none;
+    counter-reset: step;
+    margin-top: 1rem;
+  }
+  .method-list li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 2.3rem;
+    margin-bottom: 0.7rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+  .method-list li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: -0.05rem;
+    width: 1.6rem; height: 1.6rem;
+    border-radius: 50%;
+    background: rgba(98,207,156,0.12);
+    border: 1px solid rgba(98,207,156,0.4);
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 0.78rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills-list { margin-top: 1rem; }
+  .skill-row { margin-bottom: 1.3rem; }
+  .skill-row-top { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.92rem; }
+  .skill-row-top span:first-child { color: var(--text-color); font-weight: 600; }
+  .skill-row-top span:last-child { color: var(--main-color); font-weight: 700; }
+  .skill-track { height: 9px; background: rgba(30,41,59,0.6); border-radius: 1rem; overflow: hidden; }
+  .skill-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 1rem;
+    width: 0%;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 0 14px rgba(98,207,156,0.4);
+  }
+
+  /* ---------- MODAL (Work Experience "View More") ---------- */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal-box {
+    background: linear-gradient(to bottom right, #0f172a, #1e293b);
+    border: 1px solid rgba(98,207,156,0.25);
+    border-radius: 1.3rem;
+    max-width: 640px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2.2rem;
+    position: relative;
+    animation: scaleIn 0.35s ease-out;
+  }
+
+  @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    background: rgba(255,255,255,0.08);
+    border: none; color: #fff;
+    width: 34px; height: 34px; border-radius: 50%;
+    font-size: 1.1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.18); }
+
+  .modal-box h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+  .modal-box .card-sub { margin-bottom: 1rem; }
+
+  @media (max-width: 760px) {
+    .detail-section { padding: 7rem 6% 3.5rem; }
+    .section-heading { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="detail-nav">
+    <div class="detail-nav-inner">
+      <a href="/" class="detail-brand" title="Back to portfolio">
+        ← Chehan <span class="gradient-text">Lasindu</span>
+      </a>
+      <div class="detail-links">
+        <a href="#work" data-nav>Work Experience</a>
+        <a href="#education" data-nav>Educational Qualifications</a>
+        <a href="#research" data-nav>Research Experience</a>
+        <a href="#skills" data-nav>Technical Skills</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ WORK EXPERIENCE ============ -->
+  <section id="work" class="detail-section">
+    <div class="split">
+      <div class="split-body">
+        <div class="eyebrow-tag">01 · Work Experience</div>
+        <h2 class="section-heading">Work <span class="gradient-text">Experience</span></h2>
+
+        <div class="info-card">
+          <div class="card-title-row">
+            <div>
+              <div class="card-title">Software Engineering Intern</div>
+              <div class="card-sub">HotCat Technologies (Pvt) Ltd</div>
+            </div>
+            <span class="badge">06 Months</span>
+          </div>
+          <div class="card-meta">Feb 2026 – Aug 2026 &nbsp;•&nbsp; Hybrid &nbsp;•&nbsp; Wadduwa, Sri Lanka</div>
+          <p class="card-desc">
+            Worked on frontend development and REST API integration for real-world software projects.
+            Developed modules including dashboards, authentication, inventory, and reporting using React.js.
+          </p>
+          <button class="btn-outline" id="workMoreBtn">
+            <span>View More</span>
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="split-media">
+        <img src="assets/chehan_profile5.jpeg" alt="Chehan Lasindu">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATIONAL QUALIFICATIONS ============ -->
+  <section id="education" class="detail-section alt">
+    <div class="split image-first">
+      <div class="split-media">
+        <img src="assets/chehan_profile4.png" alt="Lab work">
+      </div>
+
+      <div class="split-body">
+        <div class="eyebrow-tag">02 · Educational Qualifications</div>
+        <h2 class="section-heading">Educational <span class="gradient-text">Qualifications</span></h2>
+
+        <div class="info-card">
+          <div class="card-title">University Qualification</div>
+          <div class="card-sub">BSc (Hons) in Computer Science and Technology</div>
+
+          <div class="pill-row">
+            <span class="pill">🏛️ Sabaragamuwa University of Sri Lanka</span>
+            <span class="pill">📅 2022 – 2026</span>
+            <span class="pill">📖 Major field: Computer Science</span>
+          </div>
+
+          <button class="btn-outline" id="uniDetailsBtn">
+            <span>View University Details</span>
+            <span class="arrow">→</span>
+          </button>
+
+          <!-- REVEALED ON CLICK -->
+          <div class="reveal-panel" id="uniDetailsPanel">
+
+            <div class="exam-card">
+              <div class="exam-head">
+                <span class="exam-title">G.C.E. Advanced Level Examination</span>
+                <span class="badge">2020</span>
+              </div>
+              <div class="exam-note">Physical Science Stream · Z-score 0.7369</div>
+              <div class="subject-grid">
+                <div class="subject-row"><span>Information &amp; Communication Technology</span><span class="grade">B</span></div>
+                <div class="subject-row"><span>Combined Mathematics</span><span class="grade">C</span></div>
+                <div class="subject-row"><span>Physics</span><span class="grade">S</span></div>
+              </div>
+            </div>
+
+            <div class="exam-card">
+              <div class="exam-head">
+                <span class="exam-title">G.C.E. Ordinary Level Examination</span>
+                <span class="badge">2016</span>
+              </div>
+              <div class="subject-grid">
+                <div class="subject-row"><span>Buddhism</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>Sinhala Language &amp; Literature</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>Science</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>Mathematics</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>History</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>ICT</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>Art</span><span class="grade">A</span></div>
+                <div class="subject-row"><span>Tamil</span><span class="grade">B</span></div>
+                <div class="subject-row"><span>English</span><span class="grade">C</span></div>
+              </div>
+            </div>
+
+            <div class="sem-title" style="margin-top:1.6rem;">University Academic Record</div>
+
+            <div class="gpa-trend">
+              <div class="gpa-bar-col"><div class="gpa-bar" style="height:61%"></div><div class="gpa-bar-value">2.45</div><div class="gpa-bar-label">Year 1</div></div>
+              <div class="gpa-bar-col"><div class="gpa-bar" style="height:70%"></div><div class="gpa-bar-value">2.81</div><div class="gpa-bar-label">Year 2</div></div>
+              <div class="gpa-bar-col"><div class="gpa-bar" style="height:74%"></div><div class="gpa-bar-value">2.95</div><div class="gpa-bar-label">Year 3</div></div>
+              <div class="gpa-bar-col"><div class="gpa-bar" style="height:81%"></div><div class="gpa-bar-value">3.23</div><div class="gpa-bar-label">Year 4*</div></div>
+            </div>
+            <div class="exam-note" style="margin-bottom:1rem;">*Year 4 in progress — GPA reflects completed modules only</div>
+
+            <!-- YEAR 1 -->
+            <div class="year-block">
+              <button class="year-toggle">
+                <span>Year 1</span>
+                <span class="gpa-chip">GPA 2.453</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="year-body">
+                <div class="sem-title">Semester I</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Mechanics and Properties of Matter</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Intro to Electricity and Magnetism</span><span class="grade">C+</span></div>
+                  <div class="subject-row"><span>Physics Laboratory 1-I</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>General Chemistry</span><span class="grade">C</span></div>
+                  <div class="subject-row"><span>Fundamentals of Organic Chemistry</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Inorganic Chemistry Laboratory 1-I</span><span class="grade">C</span></div>
+                  <div class="subject-row"><span>Structured Programming</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Computer Hardware and Software</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 1-I</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Calculus and Differential Equations</span><span class="grade">C+</span></div>
+                  <div class="subject-row"><span>General English I</span><span class="grade">C+</span></div>
+                </div>
+                <div class="sem-title">Semester II</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Physics of Heat and Waves</span><span class="grade">C-</span></div>
+                  <div class="subject-row"><span>Semi-Conductor Physics</span><span class="grade">C</span></div>
+                  <div class="subject-row"><span>AC Theory &amp; Circuits</span><span class="grade">C-</span></div>
+                  <div class="subject-row"><span>Physics Laboratory 1-II</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Physical Chemistry</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Fundamentals of Analytical Chemistry</span><span class="grade">D+</span></div>
+                  <div class="subject-row"><span>Organic Chemistry Laboratory 1-II</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Object Oriented Programming</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Fundamentals of Statistics</span><span class="grade">B+</span></div>
+                  <div class="subject-row"><span>Database Management Systems</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 1-II</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>General English II</span><span class="grade">C-</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- YEAR 2 -->
+            <div class="year-block">
+              <button class="year-toggle">
+                <span>Year 2</span>
+                <span class="gpa-chip">GPA 2.808</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="year-body">
+                <div class="sem-title">Semester I</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Electronics</span><span class="grade">C+</span></div>
+                  <div class="subject-row"><span>Geometrical and Physical Optics</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Physics Laboratory 2-I</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Organic Chemistry</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Industrial Chemistry and Technology</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Organic Chemistry Laboratory 2-I</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Data Structures &amp; Algorithms</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Computer Architecture &amp; Assembly Lang.</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Statistics for Experimental Analysis</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 2-I</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Academic English I</span><span class="grade">D+</span></div>
+                </div>
+                <div class="sem-title">Semester II</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Physics of EM Radiation &amp; Laser Intro</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Quantum Physics, Atomic &amp; Nuclear Physics</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Physics Laboratory 2-II</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Chemistry of Elements</span><span class="grade">D</span></div>
+                  <div class="subject-row"><span>Physical Chemistry</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Inorganic Chemistry Laboratory 2-II</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Software Engineering</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Statistical Methodology</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 2-II</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Operating System</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Leadership &amp; Communication</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Management Information System</span><span class="grade">C+</span></div>
+                  <div class="subject-row"><span>Academic English II</span><span class="grade">B</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- YEAR 3 -->
+            <div class="year-block">
+              <button class="year-toggle">
+                <span>Year 3</span>
+                <span class="gpa-chip">GPA 2.95</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="year-body">
+                <div class="sem-title">Semester I</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Multimedia &amp; Hypermedia Systems Dev.</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Artificial Intelligence &amp; Expert System</span><span class="grade">C</span></div>
+                  <div class="subject-row"><span>Software Project Management</span><span class="grade">A-</span></div>
+                  <div class="subject-row"><span>Software Quality Assurance</span><span class="grade">C-</span></div>
+                  <div class="subject-row"><span>Object Oriented Analysis and Design</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Advanced Database Management System</span><span class="grade">B+</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 3-1</span><span class="grade">B+</span></div>
+                  <div class="subject-row"><span>Agile Software Development</span><span class="grade">B+</span></div>
+                </div>
+                <div class="sem-title">Semester II</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Statistics in Quality Control</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Artificial Neural Network</span><span class="grade">B+</span></div>
+                  <div class="subject-row"><span>Digital Image Processing</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Data Mining Application</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Data Communication and Computer Network</span><span class="grade">C</span></div>
+                  <div class="subject-row"><span>Computer Graphics &amp; Visualization</span><span class="grade">C+</span></div>
+                  <div class="subject-row"><span>Mini Project</span><span class="grade">B+</span></div>
+                  <div class="subject-row"><span>Computer Laboratory 3-2</span><span class="grade">C</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- YEAR 4 -->
+            <div class="year-block">
+              <button class="year-toggle">
+                <span>Year 4</span>
+                <span class="gpa-chip">GPA 3.233*</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="year-body">
+                <div class="sem-title">Semester I</div>
+                <div class="subject-grid">
+                  <div class="subject-row"><span>Web Services</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Computer System Security</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Advanced Computer Networks</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Internet of Things (IoT)</span><span class="grade">A</span></div>
+                  <div class="subject-row"><span>Natural Language Processing</span><span class="grade">B</span></div>
+                  <div class="subject-row"><span>Mobile Computing</span><span class="grade">B-</span></div>
+                  <div class="subject-row"><span>Cloud Computing</span><span class="grade">X</span></div>
+                  <div class="subject-row"><span>Research Methodology</span><span class="grade">X</span></div>
+                </div>
+                <div class="sem-title">Semester II</div>
+                <div class="exam-note">Results pending — semester in progress.</div>
+              </div>
+            </div>
+
+            <button class="btn-outline" id="showImagesBtn" style="margin-top:1rem;">
+              <span>Show More</span>
+              <span class="arrow">↓</span>
+            </button>
+
+            <div class="reveal-panel" id="imagesPanel">
+              <div class="gallery-grid">
+                <img src="assets/chehan_profile1.jpg" alt="Presenting Tools & Technologies">
+                <img src="assets/chehan_profile2.jpeg" alt="Research proposal presentation">
+                <img src="assets/chehan_profile3.png" alt="Explaining methodology">
+                <img src="assets/chehan_profile4.png" alt="Laboratory work">
+                <img src="assets/chehan_profile5.jpeg" alt="Portrait">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH EXPERIENCE ============ -->
+  <section id="research" class="detail-section">
+    <div class="split">
+      <div class="split-body">
+        <div class="eyebrow-tag">03 · Research Experience</div>
+        <h2 class="section-heading">Research <span class="gradient-text">Experience</span></h2>
+
+        <div class="info-card">
+          <div class="card-title">Development of a Smartphone-Based Intelligent Water Quality Prediction System</div>
+          <div class="card-sub">Using Colorimetric Imaging and Machine Learning in a Controlled Light Environment</div>
+          <div class="card-meta">Sabaragamuwa University of Sri Lanka · Computer Science &amp; Technology Proposal</div>
+
+          <div class="pill-row">
+            <span class="pill">🧑‍🏫 Supervisor: Mr. U.B.P. Shamika</span>
+            <span class="pill">🧑‍🏫 Co-Supervisor: Dr. M.G.A.N. PeC.</span>
+          </div>
+
+          <p class="card-desc">
+            An end-to-end pipeline that predicts water quality parameters from smartphone images
+            captured in a controlled, light-isolated environment — combining image processing,
+            colorimetric calibration, and a machine learning decision model.
+          </p>
+
+          <div class="sem-title">Proposed Methodology</div>
+          <ol class="method-list">
+            <li>Sample collection — water samples gathered from multiple sources</li>
+            <li>Image acquisition — captured in a light-cut black box</li>
+            <li>ROI selection, noise filtering, and color normalization</li>
+            <li>Feature extraction — color, intensity, and texture features</li>
+            <li>Calibration — mapping features to parameter values</li>
+            <li>Feature fusion — combined into a normalized feature vector</li>
+            <li>Decision model — rule-based / machine learning classification</li>
+            <li>Output — turbidity, contaminants, and overall quality score</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="research-images">
+        <img src="assets/chehan_profile2.jpeg" alt="Presenting research proposal" style="grid-column: span 2;">
+        <img src="assets/chehan_profile3.png" alt="Explaining methodology">
+        <img src="assets/chehan_profile4.png" alt="Lab testing">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNICAL SKILLS ============ -->
+  <section id="skills" class="detail-section alt">
+    <div class="split image-first">
+      <div class="split-media">
+        <img src="assets/chehan_profile1.jpg" alt="Presenting tools and technologies">
+      </div>
+
+      <div class="split-body">
+        <div class="eyebrow-tag">04 · Technical Skills</div>
+        <h2 class="section-heading">Technical <span class="gradient-text">Skills</span></h2>
+
+        <div class="info-card">
+          <div class="skills-list" id="skillsList">
+            <div class="skill-row" data-level="95">
+              <div class="skill-row-top"><span>JavaScript</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="95">
+              <div class="skill-row-top"><span>TypeScript</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="95">
+              <div class="skill-row-top"><span>React.js</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="90">
+              <div class="skill-row-top"><span>Node.js</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="85">
+              <div class="skill-row-top"><span>Python</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="85">
+              <div class="skill-row-top"><span>Express.js</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="85">
+              <div class="skill-row-top"><span>MongoDB</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="80">
+              <div class="skill-row-top"><span>Java</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="80">
+              <div class="skill-row-top"><span>MySQL</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-row" data-level="90">
+              <div class="skill-row-top"><span>DevOps &amp; Cloud (Docker, CI/CD, AWS, Azure)</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK EXPERIENCE MODAL ============ -->
+  <div class="modal-overlay" id="workModal">
+    <div class="modal-box">
+      <button class="modal-close" id="workModalClose">✕</button>
+      <h3>Software Engineering Intern</h3>
+      <div class="card-sub">HotCat Technologies (Pvt) Ltd</div>
+      <div class="card-meta">Feb 2026 – Aug 2026 &nbsp;•&nbsp; Hybrid &nbsp;•&nbsp; Wadduwa, Sri Lanka</div>
+      <p class="card-desc">
+        <ul>
+          <li>Built responsive frontend interfaces and reusable components with React.js</li>
+          <li>Integrated REST APIs for authentication, dashboards, inventory, and reporting modules</li>
+          <li>Collaborated in a hybrid team environment following real-world development workflows</li>
+        </ul>
+      </p>
+      <div class="pill-row">
+        <span class="pill">React.js</span>
+        <span class="pill">REST APIs</span>
+        <span class="pill">Dashboards</span>
+        <span class="pill">Authentication</span>
+        <span class="pill">Inventory</span>
+        <span class="pill">Reporting</span>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // ---- Scroll spy ----
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const sections = document.querySelectorAll('.detail-section');
+
+  const spy = () => {
+    let current = sections[0].id;
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 120) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  };
+  window.addEventListener('scroll', spy);
+  spy();
+
+  // ---- Work Experience modal ----
+  const workModal = document.getElementById('workModal');
+  document.getElementById('workMoreBtn').addEventListener('click', () => workModal.classList.add('open'));
+  document.getElementById('workModalClose').addEventListener('click', () => workModal.classList.remove('open'));
+  workModal.addEventListener('click', e => { if (e.target === workModal) workModal.classList.remove('open'); });
+
+  // ---- University details reveal ----
+  const uniBtn = document.getElementById('uniDetailsBtn');
+  const uniPanel = document.getElementById('uniDetailsPanel');
+  uniBtn.addEventListener('click', () => {
+    const isOpen = uniPanel.classList.toggle('open');
+    uniBtn.classList.toggle('is-open', isOpen);
+    uniBtn.querySelector('span').textContent = isOpen ? 'Hide University Details' : 'View University Details';
+  });
+
+  // ---- Show More -> photo gallery ----
+  const showImagesBtn = document.getElementById('showImagesBtn');
+  const imagesPanel = document.getElementById('imagesPanel');
+  showImagesBtn.addEventListener('click', () => {
+    const isOpen = imagesPanel.classList.toggle('open');
+    showImagesBtn.querySelector('span').textContent = isOpen ? 'Hide Photos' : 'Show More';
+    if (isOpen) imagesPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  // ---- Year accordions ----
+  document.querySelectorAll('.year-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.year-block').classList.toggle('open');
+    });
+  });
+
+  // ---- Grade coloring ----
+  document.querySelectorAll('.grade').forEach(el => {
+    const g = el.textContent.trim();
+    if (g === 'X') { el.textContent = 'In Progress'; el.classList.add('grade-X'); return; }
+    const letter = g[0];
+    if (letter === 'A' || g === 'S') el.classList.add('grade-A');
+    else if (letter === 'B') el.classList.add('grade-B');
+    else if (letter === 'C') el.classList.add('grade-C');
+    else if (letter === 'D' || letter === 'F') el.classList.add('grade-D');
+    else el.classList.add('grade-X');
+  });
+
+  // ---- Skill bar fill on scroll into view ----
+  const skillRows = document.querySelectorAll('.skill-row');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target.querySelector('.skill-fill');
+        fill.style.width = entry.target.dataset.level + '%';
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  skillRows.forEach(row => io.observe(row));
+</script>
+
+</body>
+</html>
