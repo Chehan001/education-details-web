@@ -154,6 +154,17 @@ button {
   grid-template-columns: minmax(420px, 0.82fr) minmax(0, 1.05fr);
 }
 
+@media (min-width: 901px) {
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 28px;
+  }
+
+  .hero-section .split {
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.95fr);
+  }
+}
+
 .split-body {
   min-width: 0;
 }

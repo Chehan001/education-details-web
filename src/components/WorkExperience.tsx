@@ -59,6 +59,11 @@ export default function WorkExperience({ replayToken }: WorkExperienceProps) {
 	const [introPlaying, setIntroPlaying] = useState(() =>
 		typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches,
 	);
+	const updateVideoAspectRatio = (video: HTMLVideoElement) => {
+		if (video.videoWidth && video.videoHeight) {
+			video.parentElement?.style.setProperty('--video-aspect-ratio', `${video.videoWidth} / ${video.videoHeight}`);
+		}
+	};
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia('(max-width: 900px)');
@@ -85,6 +90,7 @@ export default function WorkExperience({ replayToken }: WorkExperienceProps) {
 
 		const processFrame = () => {
 			const video = videoRef.current;
+			if (video) updateVideoAspectRatio(video);
 			if (
 				segmenter &&
 				video &&
@@ -108,7 +114,7 @@ export default function WorkExperience({ replayToken }: WorkExperienceProps) {
 			segmenter = new window.SelfieSegmentation({
 				locateFile: (path) => segmentationAssets[path.split('/').pop() ?? path] ?? path,
 			});
-			segmenter.setOptions({ modelSelection: 1 });
+			segmenter.setOptions({ modelSelection: 0 });
 			segmenter.onResults(({ image, segmentationMask }) => {
 				if (disposed) return;
 				if (canvas.width !== image.width || canvas.height !== image.height) {
@@ -185,6 +191,7 @@ export default function WorkExperience({ replayToken }: WorkExperienceProps) {
 								playsInline
 								preload="metadata"
 								aria-label="Chehan's work experience video"
+								onLoadedMetadata={(event) => updateVideoAspectRatio(event.currentTarget)}
 								onEnded={isCompactViewport ? () => setIntroPlaying(false) : undefined}
 							/>
 							<canvas ref={canvasRef} aria-hidden="true" />

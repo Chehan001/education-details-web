@@ -9,25 +9,22 @@ const navItems = [
     { id: 'skills', label: 'Technical Skills' },
 ];
 
+export type ResumeSection = 'work' | 'education' | 'research' | 'skills';
+
 type NavBarProps = {
+    selectedSection: ResumeSection;
+    onSelectSection: (section: ResumeSection) => void;
     onToggleGlow: () => void;
     onSelectWork: () => void;
 };
 
-export default function NavBar({ onToggleGlow: _onToggleGlow, onSelectWork }: NavBarProps) {
+export default function NavBar({ selectedSection, onSelectSection, onToggleGlow: _onToggleGlow, onSelectWork }: NavBarProps) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState('work');
 
-    const scrollToSection = (id: string) => {
-        setActiveSection(id);
+    const selectSection = (id: ResumeSection) => {
         setMenuOpen(false);
-
-        document
-            .getElementById(id)
-            ?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
+        onSelectSection(id);
+        if (id === 'work') onSelectWork();
     };
 
     return (
@@ -40,11 +37,9 @@ export default function NavBar({ onToggleGlow: _onToggleGlow, onSelectWork }: Na
                         <button
                             key={item.id}
                             type="button"
-                            className={activeSection === item.id ? 'active' : ''}
-                            onClick={() => {
-                                scrollToSection(item.id);
-                                if (item.id === 'work') onSelectWork();
-                            }}
+                            className={selectedSection === item.id ? 'active' : ''}
+                            aria-current={selectedSection === item.id ? 'page' : undefined}
+                            onClick={() => selectSection(item.id as ResumeSection)}
                         >
                         
                             <span className="nav-label">
