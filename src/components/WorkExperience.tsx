@@ -9,6 +9,7 @@ import segmentationWasmData from '@mediapipe/selfie_segmentation/selfie_segmenta
 import segmentationWasmBinary from '@mediapipe/selfie_segmentation/selfie_segmentation_solution_wasm_bin.wasm?url';
 import segmentationSimdWasm from '@mediapipe/selfie_segmentation/selfie_segmentation_solution_simd_wasm_bin.js?url';
 import segmentationSimdWasmBinary from '@mediapipe/selfie_segmentation/selfie_segmentation_solution_simd_wasm_bin.wasm?url';
+import letterImage from '../assets/letter.png';
 import Icon from './Icon';
 import workExperienceVideo from '../assets/chehan-video.mp4';
 import '../styles/WorkExperience.css';
@@ -206,22 +207,21 @@ export default function WorkExperience({ replayToken }: WorkExperienceProps) {
 						<button className="modal-close" onClick={() => setWorkModalOpen(false)} aria-label="Close">
 							<Icon name="close" />
 						</button>
-						<div className="eyebrow-tag">Work Experience</div>
-						<h3>Software Engineering Intern</h3>
-						<div className="card-sub">HotCat Technologies (Pvt) Ltd</div>
-						<div className="card-meta">
-							<span><Icon name="calendar" /> Feb 2026 – Aug 2026</span>
-							<span><Icon name="location" /> Wadduwa, Sri Lanka</span>
-						</div>
-						<ul className="modal-list">
-							<li>Built responsive frontend interfaces and reusable components with React.js.</li>
-							<li>Integrated REST APIs for authentication, dashboards, inventory and reporting modules.</li>
-							<li>Collaborated in a hybrid team environment following real-world development workflows.</li>
-						</ul>
-						<div className="pill-row">
-							{['React.js', 'REST APIs', 'Dashboards', 'Authentication', 'Inventory', 'Reporting'].map((tag) => (
-								<span className="pill" key={tag}>{tag}</span>
-							))}
+						<div className="eyebrow-tag">Supervisor Recommendation</div>
+						<div className="testimonial-layout">
+							<div className="testimonial-copy">
+								<h3>Internship Testimonial</h3>
+								<blockquote>
+									<p>During his internship, Chehan demonstrated excellent dedication, technical competence, and a dependable work ethic. He integrated smoothly into our development process, completed tasks with precision, and consistently sought opportunities to expand his skill set. It was a pleasure supervising Chehan, and I am confident in his potential for a successful career in software engineering.</p>
+								</blockquote>
+								<div className="testimonial-author">
+									<strong>Yasindu Sathsara</strong>
+									<span>Founder / CEO, HotCat Technologies (Pvt) Ltd</span>
+								</div>
+							</div>
+							<figure className="testimonial-letter">
+								<img src={letterImage} alt="Recommendation letter from HotCat Technologies" />
+							</figure>
 						</div>
 					</div>
 				</div>
