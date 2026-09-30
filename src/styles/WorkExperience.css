@@ -1,73 +1,63 @@
 .portrait-media {
-	max-width: 510px;
-	justify-self: end;
-	padding: 20px;
-}
-
-.portrait-media::before,
-.portrait-media::after {
-	content: '';
-	position: absolute;
-	border: 1px solid rgba(52, 211, 153, 0.35);
-	border-radius: 32px;
-	background: rgba(16, 185, 129, 0.025);
-}
-
-.portrait-media::before {
-	inset: 5% 5% 4% 10%;
-	transform: rotate(5deg);
-}
-
-.portrait-media::after {
-	inset: 1% 10% 8% 2%;
-	border-color: rgba(52, 211, 153, 0.16);
-	background: transparent;
-	transform: rotate(-4deg);
-}
-
-.portrait-media img {
-	position: relative;
-	z-index: 2;
-	display: block;
 	width: 100%;
 	aspect-ratio: 0.82;
+	max-width: 510px;
+	justify-self: end;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+	background: transparent;
+}
+
+.work-intro-only .split {
+	grid-template-columns: minmax(0, 1fr);
+	align-items: center;
+}
+
+.work-intro-only .portrait-media {
+	justify-self: center;
+}
+
+.portrait-media video {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	object-position: center top;
-	border: 1px solid rgba(110, 231, 183, 0.4);
-	border-radius: 30px;
-	box-shadow: 0 30px 90px rgba(0, 0, 0, 0.58), 0 0 45px rgba(16, 185, 129, 0.11);
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+	background: transparent;
+	transition: opacity 150ms ease;
 }
 
-.media-glow {
+.portrait-media canvas {
 	position: absolute;
-	inset: 20% 12%;
-	border-radius: 50%;
-	background: rgba(16, 185, 129, 0.22);
-	filter: blur(65px);
+	inset: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+	background: transparent;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 150ms ease;
 }
 
-.floating-label {
-	position: absolute;
-	z-index: 3;
-	padding: 9px 12px;
-	border: 1px solid rgba(110, 231, 183, 0.24);
-	border-radius: 12px;
-	color: #d9fff0;
-	background: rgba(3, 20, 14, 0.72);
-	backdrop-filter: blur(14px);
-	font-size: 10px;
-	font-weight: 650;
-	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+.portrait-media.segmentation-ready video {
+	opacity: 0;
 }
 
-.label-top {
-	top: 12%;
-	right: -10px;
-}
-
-.label-bottom {
-	left: -10px;
-	bottom: 13%;
+.portrait-media.segmentation-ready canvas {
+	opacity: 1;
 }
 
 .modal-overlay {
@@ -132,18 +122,6 @@
 }
 
 @media (max-width: 620px) {
-	.portrait-media {
-		padding: 8px;
-	}
-
-	.portrait-media img {
-		border-radius: 22px;
-	}
-
-	.floating-label {
-		font-size: 8px;
-	}
-
 	.modal-box {
 		padding: 24px 18px;
 		border-radius: 19px;

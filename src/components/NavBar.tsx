@@ -11,9 +11,10 @@ const navItems = [
 
 type NavBarProps = {
     onToggleGlow: () => void;
+    onSelectWork: () => void;
 };
 
-export default function NavBar({ onToggleGlow }: NavBarProps) {
+export default function NavBar({ onToggleGlow: _onToggleGlow, onSelectWork }: NavBarProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('work');
 
@@ -40,7 +41,10 @@ export default function NavBar({ onToggleGlow }: NavBarProps) {
                             key={item.id}
                             type="button"
                             className={activeSection === item.id ? 'active' : ''}
-                            onClick={() => scrollToSection(item.id)}
+                            onClick={() => {
+                                scrollToSection(item.id);
+                                if (item.id === 'work') onSelectWork();
+                            }}
                         >
                         
                             <span className="nav-label">

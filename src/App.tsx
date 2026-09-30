@@ -9,15 +9,19 @@ import './styles/ResumeLayout.css';
 
 function App() {
   const [softGlowOff, setSoftGlowOff] = useState(false);
+  const [workReplayToken, setWorkReplayToken] = useState(0);
 
   return (
     <div className={`resume-details-container ${softGlowOff ? 'soft-glow-off' : ''}`}>
       <div className="background-orb orb-one" />
       <div className="background-orb orb-two" />
       <div className="background-grid" />
-      <NavBar onToggleGlow={() => setSoftGlowOff((value) => !value)} />
+      <NavBar
+        onToggleGlow={() => setSoftGlowOff((value) => !value)}
+        onSelectWork={() => setWorkReplayToken((value) => value + 1)}
+      />
       <main>
-        <WorkExperience />
+        <WorkExperience replayToken={workReplayToken} />
         <EducationalQualifications />
         <ResearchExperience />
         <TechnicalSkills />
